@@ -17,7 +17,7 @@ const getSundays = (yyyy, mm) => {
     const daysInMonth = new Date(yyyy, mm, 0).getDate()
     const date = new Date(yyyy, mm - 1, 1);
     const firstDay = date.getDay()
-    const firstSunday = firstDay + 6 - firstDay;
+    const firstSunday = 8 - firstDay ;
     return Array.from({ length: 6 })
         .map((_, i) => firstSunday + 7 * i)
         .filter(item => item <= daysInMonth)
